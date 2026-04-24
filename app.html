@@ -470,14 +470,15 @@ html,body{height:100%;background:#000;display:flex;align-items:center;justify-co
 /* ══════════════════════════════════════════
    🔥 FIREBASE CONFIG
    ══════════════════════════════════════════ */
-const firebaseConfig={
-  apiKey:"AIzaSyDEMO_REPLACE_WITH_YOUR_KEY",
-  authDomain:"your-project.firebaseapp.com",
-  databaseURL:"https://your-project-default-rtdb.firebaseio.com",
-  projectId:"your-project",
-  storageBucket:"your-project.appspot.com",
-  messagingSenderId:"000000000000",
-  appId:"1:000000000000:web:0000000000000000"
+const firebaseConfig = {
+  apiKey: "AIzaSyCcv6TYBlwM3wdASndMtqncQvJhzztFZ9k",
+  authDomain: "uno-i-t.firebaseapp.com",
+  databaseURL: "https://uno-i-t-default-rtdb.firebaseio.com",
+  projectId: "uno-i-t",
+  storageBucket: "uno-i-t.firebasestorage.app",
+  messagingSenderId: "735333945529",
+  appId: "1:735333945529:web:0de9350fe4d36009224b68",
+  measurementId: "G-NFVJZ0L8DF"
 };
 firebase.initializeApp(firebaseConfig);
 const DB=firebase.database();
@@ -797,16 +798,12 @@ function copyRoomLink(){
 }
 
 /* ══ GAMES ══ */
-function openGame(gameId,name){
+function openGame(gameId, name){
   document.getElementById('gameview-name').textContent = name;
   let frame = document.getElementById('game-frame');
-
-if(gameId==='uno'){
-  frame.src='app.html';
-}
-    frame.src = 'about:blank';
+  if(gameId === 'uno'){
+    frame.src = 'index.html'; // ← هذا السطر يفتح لعبتك
   }
-
   showPage('gameview');
 }
 function closeGame(){
