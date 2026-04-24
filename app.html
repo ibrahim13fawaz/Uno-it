@@ -798,11 +798,14 @@ function copyRoomLink(){
 }
 
 /* ══ GAMES ══ */
-function openGame(gameId, name){
-  document.getElementById('gameview-name').textContent = name;
-  let frame = document.getElementById('game-frame');
-  if(gameId === 'uno'){
-    frame.src = 'index.html'; // ← هذا السطر يفتح لعبتك
+function openGame(gameId,name){
+  document.getElementById('gameview-name').textContent=name;
+  let frame=document.getElementById('game-frame');
+  if(gameId==='uno'){
+    // Load UNO game — same folder
+    frame.src='uno-multiplayer.html';
+  }else{
+    frame.src='about:blank';
   }
   showPage('gameview');
 }
