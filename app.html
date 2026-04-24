@@ -798,14 +798,15 @@ function copyRoomLink(){
 
 /* ══ GAMES ══ */
 function openGame(gameId,name){
-  document.getElementById('gameview-name').textContent=name;
-  let frame=document.getElementById('game-frame');
-if(gameId==='uno'){
-  frame.src='index.html';
-}
-  }else{
-    frame.src='about:blank';
+  document.getElementById('gameview-name').textContent = name;
+  let frame = document.getElementById('game-frame');
+
+  if(gameId === 'uno'){
+    frame.src = 'index.html';
+  } else {
+    frame.src = 'about:blank';
   }
+
   showPage('gameview');
 }
 function closeGame(){
